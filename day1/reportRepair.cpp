@@ -1,3 +1,4 @@
+#include <algorithm>
 #include <iostream>
 #include <fstream>
 #include <string>
@@ -15,7 +16,7 @@ int main(int argc, char *argv[]) {
         return -2;
     }
 
-    string implementedNumbers = "23";
+   string implementedNumbers = "23";
     if (implementedNumbers.find(argv[1]) == string::npos) {
         cout << "Only " + implementedNumbers + " are implemented" << endl;
         return -2;
@@ -26,7 +27,7 @@ int main(int argc, char *argv[]) {
     while (ifile >> num) {
         arr[num]++; 
     }
-
+    
     if (atoi(argv[1]) == 2) {
         cout << findTwoNumbers(arr, 2020) << endl;
     } else if (atoi(argv[1]) == 3) {
